@@ -28,7 +28,7 @@ const Usuario = mongoose.model('Usuario', usuarioSchema)
 // Dados -> Banco de Dados -> Back end -> Banco de Dados e busca suas informações
 
 // Retorna / lista os usuarios
-app.get('/usuarios-dev', async (request, response) => {
+app.get('/usuario', async (request, response) => {
 
     const usuariosDoBanco = await Usuario.find()
 
