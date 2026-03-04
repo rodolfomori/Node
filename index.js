@@ -1,8 +1,10 @@
 import express from 'express'
 import mongoose from 'mongoose'
+import cors from 'cors'
 
 const app = express()
 app.use(express.json()) // avisando que eu vou usar JSON
+app.use(cors()) // Liberando o cors
 
 mongoose.connect('mongodb+srv://rodolfo:KiIXDZEJCiXQaU8d@cluster0.e0lcgmo.mongodb.net/Usuarios?appName=Cluster0')
     .then(() => console.log("Conectado ao banco de dados Mongo"))
@@ -49,4 +51,4 @@ app.listen(3003, () => {
     console.log("Servidor Rodando na Porta 3003")
 })
 
-// localhost:3000/usuarios
+// localhost:3003/usuarios - GET
